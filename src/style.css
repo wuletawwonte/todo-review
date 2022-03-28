@@ -1,0 +1,165 @@
+:root {
+  --primary: #4096e2;
+  --white: #fff;
+  --gray: #e2dfdf;
+  --gray-2: #f6f6f6;
+  --gray-3: #959595;
+  --black: #000;
+  --black-2: #bdbdbd;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo {
+  margin-top: 100px;
+  background-color: var(--white);
+  width: 500px;
+  border-radius: 3px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#tasks {
+  padding: 0;
+  list-style: none;
+}
+
+.entry {
+  height: 45px;
+  padding-left: 18px;
+  padding-right: 13px;
+  border-bottom: 1.4px solid var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-li i {
+  font-size: 16px;
+}
+
+.add-task-btn i {
+  font-size: 16px;
+}
+
+.delete-btn i {
+  font-size: 17px;
+}
+
+.entry button i {
+  color: var(--black-2);
+  font-size: 20px;
+  transition: color 0.1s ease-in-out;
+}
+
+.entry p {
+  font-size: 14px;
+}
+
+.in-list-container {
+  display: flex;
+  gap: 13px;
+  flex-grow: 1;
+  align-self: stretch;
+  align-items: center;
+}
+
+.in-list-container p {
+  color: var(--black);
+}
+
+.task-description {
+  flex-grow: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+.li-btn {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  align-items: flex-end;
+}
+
+.drag-btn {
+  cursor: move;
+}
+
+.delete-btn {
+  margin-right: 3px;
+}
+
+.delete-btn:hover i,
+.drag-btn:hover i {
+  color: var(--black);
+}
+
+.clear-task-li {
+  justify-content: center;
+  background-color: var(--gray-2);
+}
+
+.clear-task-li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title-li {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.title-li > button:hover i {
+  color: var(--black);
+}
+
+#add-task {
+  flex-grow: 1;
+  display: flex;
+}
+
+.new-task {
+  color: var(--black);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+.new-task::placeholder {
+  color: var(--gray-3);
+  font-style: italic;
+}
+
+.active-btn {
+  display: block;
+}
+
+.hidden-btn {
+  visibility: hidden;
+}
+
+.task-line-through {
+  text-decoration: line-through;
+  color: red;
+}
