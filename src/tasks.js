@@ -1,11 +1,11 @@
 export default class Tasks {
   constructor() {
-    this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   }
 
   add(task) {
     this.tasks.push(task);
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
   remove(id) {
@@ -13,7 +13,7 @@ export default class Tasks {
     this.tasks.forEach((task, index) => {
       task.index = index + 1;
     });
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
   update(id, description) {
@@ -22,7 +22,7 @@ export default class Tasks {
         this.tasks[arrIndex].description = description;
       }
     });
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
   changeStatus(id, status) {
@@ -31,7 +31,7 @@ export default class Tasks {
         this.tasks[arrIndex].completed = status;
       }
     });
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 
   size() {
@@ -43,6 +43,6 @@ export default class Tasks {
     this.tasks.forEach((task, index) => {
       task.index = index + 1;
     });
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    localStorage.setItem("tasks", JSON.stringify(this.tasks));
   }
 }
