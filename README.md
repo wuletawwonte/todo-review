@@ -1,6 +1,6 @@
 # Todo list app
 
-> A Javascript to do list web app that keep track of actions or todos.
+> A Javascript to do list web app that keep track of actions or todos. This repo is created for the purpose of practicing peer review.
 
 ## Built With
 
